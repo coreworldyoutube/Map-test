@@ -1,0 +1,32 @@
+#town {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); /* 10列のブロック */
+    grid-template-rows: repeat(10, 50px); /* 10行のブロック */
+    gap: 1px;
+}
+
+.block {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.path {
+    background-color: #d0d0d0; /* 道 */
+}
+
+.wall {
+    background-color: #000; /* 壁 */
+}
+
+.house {
+    background-color: #f0a; /* 家 */
+}
+
+.hero {
+    background-color: #0f0; /* キャラクター */
+}
