@@ -1,0 +1,8 @@
+{
+  "width": 25,
+  "height": 25,
+  "map": [
+    ["path*3", "wall*2", "path*5", "wall*1", "path*3", "wall*2", "path*1"],
+    ["path*1", "wall*2", "path*4", "wall*2", "path*1", "path*3"]
+  ]
+}
