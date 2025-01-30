@@ -1,39 +1,99 @@
-#town {
-    display: grid;
-    grid-template-columns: repeat(25, 16px); /* 16pxに変更 */
-    grid-template-rows: repeat(25, 16px); /* 16pxに変更 */
-    gap: 1px;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マップ読み込み</title>
+  <style>
+    /* #townの設定 */
+    #town {
+      display: grid;
+      grid-template-columns: repeat(25, 16px); /* 横25列 */
+      grid-template-rows: repeat(25, 16px); /* 縦25行 */
+      gap: 1px;
+    }
 
-.block {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid #ccc;
-    background-size: contain; /* 画像がブロックに収まるように調整 */
-}
+    /* .blockの設定 */
+    .block {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #ccc;
+      background-size: contain; /* 画像がブロックに収まるように調整 */
+    }
 
-.path {
-    background-image: url('grass.png'); /* grass.pngを道の画像として使用 */
-    background-size: contain; /* 画像がブロックに収まるように調整 */
-}
+    /* .pathの設定 */
+    .path {
+      background-image: url('grass.png'); /* grass.pngを道の画像として使用 */
+      background-size: contain; /* 画像がブロックに収まるように調整 */
+    }
 
-.wall {
-    background-image: url('stone.png'); /* stone.pngを壁の画像として使用 */
-    background-size: contain; /* 画像がブロックに収まるように調整 */
-}
+    /* .wallの設定 */
+    .wall {
+      background-image: url('stone.png'); /* stone.pngを壁の画像として使用 */
+      background-size: contain; /* 画像がブロックに収まるように調整 */
+    }
 
-.house {
-    background-image: url('home.png'); /* home.pngを壁の画像として使用 */
-    background-size: contain; /* 画像がブロックに収まるように調整 */
-}
+    /* .houseの設定 */
+    .house {
+      background-image: url('home.png'); /* home.pngを壁の画像として使用 */
+      background-size: contain; /* 画像がブロックに収まるように調整 */
+    }
 
-.hero {
-    background-image: url('hero.png'); /* キャラクター画像 */
-    background-size: 100% 100%; /* 画像をブロック全体に合わせて縮小 */
-    background-repeat: no-repeat; /* 画像の繰り返しを防止 */
-    background-position: center; /* 画像を中央に配置 */
-}
+    /* .heroの設定 */
+    .hero {
+      background-image: url('hero.png'); /* キャラクター画像 */
+      background-size: 100% 100%; /* 画像をブロック全体に合わせて縮小 */
+      background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+      background-position: center; /* 画像を中央に配置 */
+    }
+  </style>
+</head>
+<body>
+  <div id="town"></div>
+
+  <script>
+    // JSONファイルの読み込み処理
+    fetch('map.json')
+      .then(response => response.json())
+      .then(data => {
+        renderMap(data); // 読み込んだデータでマップを表示
+      })
+      .catch(error => {
+        console.error('Error loading map:', error);
+      });
+
+    // マップをHTMLにレンダリングする関数
+    function renderMap(mapData) {
+      const townElement = document.getElementById('town');
+      const width = mapData.width;
+      const height = mapData.height;
+
+      // マップデータをループしてHTMLのブロックを作成
+      mapData.map.forEach(row => {
+        row.forEach(cell => {
+          const blockElement = document.createElement('div');
+          blockElement.classList.add('block'); // 基本のブロックスタイルを追加
+
+          // セルの内容に応じてクラスを追加
+          if (cell === 'path') {
+            blockElement.classList.add('path');
+          } else if (cell === 'wall') {
+            blockElement.classList.add('wall');
+          } else if (cell === 'house') {
+            blockElement.classList.add('house');
+          } else if (cell === 'hero') {
+            blockElement.classList.add('hero');
+          }
+
+          // ブロックをtownElementに追加
+          townElement.appendChild(blockElement);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
