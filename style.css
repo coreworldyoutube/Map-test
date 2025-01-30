@@ -1,13 +1,13 @@
 #town {
     display: grid;
-    grid-template-columns: repeat(25, 100px); /* 25列のブロック */
-    grid-template-rows: repeat(25, 100px); /* 25行のブロック */
+    grid-template-columns: repeat(25, 400px); /* 25列のブロック */
+    grid-template-rows: repeat(25, 400px); /* 25行のブロック */
     gap: 1px;
 }
 
 .block {
-    width: 64px;
-    height: 64px;
+    width: 16px;
+    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
