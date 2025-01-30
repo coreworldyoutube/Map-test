@@ -32,6 +32,8 @@
 }
 
 .hero {
-    background-image: url('hero.png'); /* キャラクターの画像 */
-    background-size: contain; /* 画像をブロックに収める */
+    background-image: url('hero.png'); /* キャラクター画像 */
+    background-size: contain; /* 画像をブロック内に収める */
+    background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+    background-position: center; /* 画像をブロックの中央に配置 */
 }
