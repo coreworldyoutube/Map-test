@@ -1,7 +1,7 @@
 #town {
     display: grid;
-    grid-template-columns: repeat(25, 400px); /* 25列のブロック */
-    grid-template-rows: repeat(25, 400px); /* 25行のブロック */
+    grid-template-columns: repeat(25, 16px); /* 16pxに変更 */
+    grid-template-rows: repeat(25, 16px); /* 16pxに変更 */
     gap: 1px;
 }
 
