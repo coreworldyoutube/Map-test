@@ -33,7 +33,7 @@
 
 .hero {
     background-image: url('hero.png'); /* キャラクター画像 */
-    background-size: 200% 100%; /* 横に2倍の大きさで設定 */
+    background-size: 100% 100%; /* 画像をブロック全体に合わせて縮小 */
     background-repeat: no-repeat; /* 画像の繰り返しを防止 */
-    background-position: left center; /* 左側に1人だけ表示 */
+    background-position: center; /* 画像を中央に配置 */
 }
