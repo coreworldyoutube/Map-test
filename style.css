@@ -1,7 +1,7 @@
 #town {
     display: grid;
-    grid-template-columns: repeat(25, 50px); /* 10列のブロック */
-    grid-template-rows: repeat(25, 50px); /* 10行のブロック */
+    grid-template-columns: repeat(25, 50px); /* 25列のブロック */
+    grid-template-rows: repeat(25, 50px); /* 25行のブロック */
     gap: 1px;
 }
 
@@ -31,4 +31,6 @@
 
 .hero {
     background-color: #0f0; /* キャラクター */
+    background-image: url('hero.png'); /* キャラクターの画像 */
+    background-size: cover; /* 画像をブロックにフィットさせる */
 }
