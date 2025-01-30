@@ -1,7 +1,7 @@
 #town {
     display: grid;
-    grid-template-columns: repeat(10, 50px); /* 10列のブロック */
-    grid-template-rows: repeat(10, 50px); /* 10行のブロック */
+    grid-template-columns: repeat(25, 50px); /* 10列のブロック */
+    grid-template-rows: repeat(25, 50px); /* 10行のブロック */
     gap: 1px;
 }
 
@@ -16,15 +16,17 @@
 }
 
 .path {
-    background-color: #d0d0d0; /* 道 */
+    background-image: url('dirt.png'); /* dirt.pngを道の画像として使用 */
+    background-size: cover; /* 画像をブロックにフィットさせる */
 }
 
 .wall {
-    background-color: #000; /* 壁 */
+    background-image: url('stone.png'); /* stone.pngを壁の画像として使用 */
+    background-size: cover; /* 画像をブロックにフィットさせる */
 }
 
 .house {
-    background-color: #f0a; /* 家 */
+    background-color: #f0a; /* 家（画像なし） */
 }
 
 .hero {
