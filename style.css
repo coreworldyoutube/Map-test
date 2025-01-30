@@ -16,24 +16,23 @@
     background-size: contain; /* 画像がブロックに収まるように調整 */
 }
 
-
 .path {
     background-image: url('grass.png'); /* grass.pngを道の画像として使用 */
-    background-size: cover; /* 画像をブロックにフィットさせる */
+    background-size: contain; /* 画像がブロックに収まるように調整 */
 }
 
 .wall {
     background-image: url('stone.png'); /* stone.pngを壁の画像として使用 */
-    background-size: cover; /* 画像をブロックにフィットさせる */
+    background-size: contain; /* 画像がブロックに収まるように調整 */
 }
 
 .house {
     background-image: url('home.png'); /* home.pngを壁の画像として使用 */
-    background-size: cover; /* 画像をブロックにフィットさせる */
+    background-size: contain; /* 画像がブロックに収まるように調整 */
 }
 
 .hero {
     background-color: #0f0; /* キャラクター */
     background-image: url('hero.png'); /* キャラクターの画像 */
-    background-size: cover; /* 画像をブロックにフィットさせる */
+    background-size: contain; /* 画像がブロックに収まるように調整 */
 }
