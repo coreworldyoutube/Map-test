@@ -32,7 +32,6 @@
 }
 
 .hero {
-    background-color: #0f0; /* キャラクター */
     background-image: url('hero.png'); /* キャラクターの画像 */
-    background-size: contain; /* 画像がブロックに収まるように調整 */
+    background-size: contain; /* 画像をブロックに収める */
 }
