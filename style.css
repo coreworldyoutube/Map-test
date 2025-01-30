@@ -16,7 +16,7 @@
 }
 
 .path {
-    background-image: url('dirt.png'); /* dirt.pngを道の画像として使用 */
+    background-image: url('grass.png'); /* grass.pngを道の画像として使用 */
     background-size: cover; /* 画像をブロックにフィットさせる */
 }
 
@@ -26,7 +26,8 @@
 }
 
 .house {
-    background-color: #f0a; /* 家（画像なし） */
+    background-image: url('home.png'); /* home.pngを壁の画像として使用 */
+    background-size: cover; /* 画像をブロックにフィットさせる */
 }
 
 .hero {
